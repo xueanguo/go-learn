@@ -144,14 +144,23 @@ import (
 // }
 
 func main() {
-	scoreMap := make(map[string]int, 8)
-	scoreMap["张三"] = 90
-	scoreMap["小明"] = 100
-	// 如果key存在ok为true,v为对应的值；不存在ok为false,v为值类型的零值
-	v, ok := scoreMap["张三"]
+	var scoreMap = make(map[string]int, 8)
+	scoreMap["沙河那种"] = 100
+	scoreMap["小王子"] = 200
+
+	v, ok := scoreMap["小王子"]
 	if ok {
-		fmt.Println(v, ok)
+		fmt.Println(v)
 	} else {
-		fmt.Println("查无此人")
+		fmt.Println("2222222")
 	}
+
+	for k, v := range scoreMap {
+		fmt.Println(k, v)
+	}
+
+	for k := range scoreMap {
+		fmt.Println(k)
+	}
+
 }
