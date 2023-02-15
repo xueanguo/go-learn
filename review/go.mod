@@ -1,3 +1,3 @@
-module review
+module hello
 
-go 1.17
+go 1.18
